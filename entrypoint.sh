@@ -22,7 +22,7 @@ git clone --single-branch --branch main "https://$API_TOKEN_GITHUB@github.com/$R
 ls -la "$CLONE_DIR"
 
 echo "current location: `pwd`"
-echo "current location: `ls -la $FOLDER`"
+echo "clone: `ls -la $CLONE_DIR`"
 
 echo "Cleaning destination repository of old files"
 # Copy files into the git and deletes all git
