@@ -26,8 +26,9 @@ echo "Cleaning destination repository of old files"
 # Copy files into the git and deletes all git
 find "$CLONE_DIR" | grep -v "^$CLONE_DIR/\.git" | grep -v "^$CLONE_DIR$" | xargs rm -rf # delete all files (to handle deletions)
 ls -la "$CLONE_DIR"
-echo "root: "
-ls -la
+echo "root:   `pwd`"
+ls -la /github/workspace"
+
 echo "Copying contents to to git repo"
 cp -r "$FOLDER"/* "$CLONE_DIR"
 cd "$CLONE_DIR"
