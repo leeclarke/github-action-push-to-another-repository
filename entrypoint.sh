@@ -30,7 +30,7 @@ echo "root:   `pwd`"
 ls -la /github/workspace
 
 echo "Copying contents to to git repo"
-cp -r "$FOLDER"/* "$CLONE_DIR"
+cp -r /github/workspace/"$FOLDER"/* "$CLONE_DIR"
 cd "$CLONE_DIR"
 ls -la
 
