@@ -18,7 +18,7 @@ echo "Cloning destination git repository"
 # Setup git
 git config --global user.email "$USER_EMAIL"
 git config --global user.name "$GITHUB_USERNAME"
-git clone --single-branch --branch master "https://$API_TOKEN_GITHUB@github.com/$REPO_USERNAME/$GITHUB_REPO.git" "$CLONE_DIR"
+git clone --single-branch --branch main "https://$API_TOKEN_GITHUB@github.com/$REPO_USERNAME/$GITHUB_REPO.git" "$CLONE_DIR"
 ls -la "$CLONE_DIR"
 
 echo "Cleaning destination repository of old files"
@@ -37,4 +37,4 @@ git status
 git commit --message "Update from https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
 
 echo "Pushing git commit"
-git push origin master
+git push origin main
